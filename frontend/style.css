@@ -1,0 +1,309 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+    --accent:#06b6d4;
+}
+
+body.light{
+    --bg:#f5f5f5;
+    --card:#ffffff;
+    --text:#111827;
+    --accent:#0891b2;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,.95);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--accent);
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--accent);
+}
+
+#themeToggle{
+    border:none;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:28px;
+}
+
+.hero-content h2{
+    font-size:58px;
+    color:var(--accent);
+    margin:10px 0;
+}
+
+.hero-content h3{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid var(--accent);
+    box-shadow:0 0 25px var(--accent);
+}
+
+.btn{
+    background:var(--accent);
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    display:inline-block;
+    margin-right:10px;
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid var(--accent);
+}
+
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    color:var(--accent);
+    font-size:28px;
+    margin-right:15px;
+}
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:var(--accent);
+}
+
+/* About */
+
+.about-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:var(--card);
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    background:var(--accent);
+}
+
+/* Projects */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+}
+
+.project-card h3{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.project-card p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.project-card span{
+    display:inline-block;
+    background:var(--accent);
+    padding:6px 12px;
+    border-radius:20px;
+    margin:4px;
+}
+
+/* Certifications */
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.certificate-card{
+    background:var(--card);
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+}
+
+/* Contact */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:var(--card);
+    color:var(--text);
+}
+
+form button{
+    width:100%;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:var(--card);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-content h2{
+        font-size:42px;
+    }
+
+    .hero-image img{
+        width:250px;
+        height:250px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+
+.education-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.education-card h3{
+    color:var(--accent);
+    margin-bottom:10px;
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
